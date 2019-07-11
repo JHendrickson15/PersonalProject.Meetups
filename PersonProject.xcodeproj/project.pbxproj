@@ -19,6 +19,14 @@
 		16F15F5B22D64BF000E90C69 /* CoreLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F5A22D64BF000E90C69 /* CoreLocationManager.swift */; };
 		16F15F5D22D6513400E90C69 /* customSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F5C22D6513400E90C69 /* customSearchBar.swift */; };
 		16F15F5F22D6573B00E90C69 /* EventsCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F5E22D6573B00E90C69 /* EventsCreationViewController.swift */; };
+		16F15F6122D6805E00E90C69 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F6022D6805E00E90C69 /* CustomTextView.swift */; };
+		16F15F6322D6807600E90C69 /* Style Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F6222D6807600E90C69 /* Style Guide.swift */; };
+		16F15F6522D6831500E90C69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F6422D6831500E90C69 /* User.swift */; };
+		16F15F6922D6845300E90C69 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F15F6822D6845300E90C69 /* CloudKit.framework */; };
+		16F15F6B22D6857F00E90C69 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F6A22D6857F00E90C69 /* UserController.swift */; };
+		16F15F6D22D6891B00E90C69 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F6C22D6891B00E90C69 /* SignupViewController.swift */; };
+		16F15F6F22D68CC600E90C69 /* FetchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F6E22D68CC600E90C69 /* FetchUserViewController.swift */; };
+		16F15F7122D697EE00E90C69 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F15F7022D697EE00E90C69 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +44,15 @@
 		16F15F5A22D64BF000E90C69 /* CoreLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationManager.swift; sourceTree = "<group>"; };
 		16F15F5C22D6513400E90C69 /* customSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customSearchBar.swift; sourceTree = "<group>"; };
 		16F15F5E22D6573B00E90C69 /* EventsCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCreationViewController.swift; sourceTree = "<group>"; };
+		16F15F6022D6805E00E90C69 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		16F15F6222D6807600E90C69 /* Style Guide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Style Guide.swift"; sourceTree = "<group>"; };
+		16F15F6422D6831500E90C69 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		16F15F6622D6845100E90C69 /* PersonProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PersonProject.entitlements; sourceTree = "<group>"; };
+		16F15F6822D6845300E90C69 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		16F15F6A22D6857F00E90C69 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		16F15F6C22D6891B00E90C69 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		16F15F6E22D68CC600E90C69 /* FetchUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserViewController.swift; sourceTree = "<group>"; };
+		16F15F7022D697EE00E90C69 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F15F6922D6845300E90C69 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +72,7 @@
 			children = (
 				16F15F3722D5494500E90C69 /* PersonProject */,
 				16F15F3622D5494500E90C69 /* Products */,
+				16F15F6722D6845300E90C69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +87,7 @@
 		16F15F3722D5494500E90C69 /* PersonProject */ = {
 			isa = PBXGroup;
 			children = (
+				16F15F6622D6845100E90C69 /* PersonProject.entitlements */,
 				16F15F4A22D549A000E90C69 /* Resources */,
 				16F15F4D22D549D800E90C69 /* Models */,
 				16F15F5022D549E900E90C69 /* Model Controllers */,
@@ -94,6 +114,7 @@
 			children = (
 				16F15F4B22D549D400E90C69 /* Events.swift */,
 				16F15F5A22D64BF000E90C69 /* CoreLocationManager.swift */,
+				16F15F6422D6831500E90C69 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				16F15F4E22D549E600E90C69 /* EventsController.swift */,
+				16F15F6A22D6857F00E90C69 /* UserController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -111,6 +133,8 @@
 			children = (
 				16F15F5122D54A0B00E90C69 /* EventsListViewController.swift */,
 				16F15F5E22D6573B00E90C69 /* EventsCreationViewController.swift */,
+				16F15F6C22D6891B00E90C69 /* SignupViewController.swift */,
+				16F15F6E22D68CC600E90C69 /* FetchUserViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -121,6 +145,9 @@
 				16F15F3C22D5494500E90C69 /* Main.storyboard */,
 				16F15F5822D6462900E90C69 /* EventsListTableViewCell.swift */,
 				16F15F5C22D6513400E90C69 /* customSearchBar.swift */,
+				16F15F6222D6807600E90C69 /* Style Guide.swift */,
+				16F15F6022D6805E00E90C69 /* CustomTextView.swift */,
+				16F15F7022D697EE00E90C69 /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +158,14 @@
 				16F15F5522D551AB00E90C69 /* DataExtension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		16F15F6722D6845300E90C69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16F15F6822D6845300E90C69 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +200,14 @@
 				TargetAttributes = {
 					16F15F3422D5494500E90C69 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -204,15 +247,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F15F6322D6807600E90C69 /* Style Guide.swift in Sources */,
+				16F15F6522D6831500E90C69 /* User.swift in Sources */,
 				16F15F5922D6462900E90C69 /* EventsListTableViewCell.swift in Sources */,
 				16F15F4C22D549D400E90C69 /* Events.swift in Sources */,
+				16F15F7122D697EE00E90C69 /* CustomTextField.swift in Sources */,
 				16F15F5222D54A0B00E90C69 /* EventsListViewController.swift in Sources */,
+				16F15F6B22D6857F00E90C69 /* UserController.swift in Sources */,
 				16F15F4F22D549E600E90C69 /* EventsController.swift in Sources */,
 				16F15F3922D5494500E90C69 /* AppDelegate.swift in Sources */,
+				16F15F6D22D6891B00E90C69 /* SignupViewController.swift in Sources */,
 				16F15F5B22D64BF000E90C69 /* CoreLocationManager.swift in Sources */,
+				16F15F6122D6805E00E90C69 /* CustomTextView.swift in Sources */,
 				16F15F5D22D6513400E90C69 /* customSearchBar.swift in Sources */,
 				16F15F5F22D6573B00E90C69 /* EventsCreationViewController.swift in Sources */,
 				16F15F5622D551AB00E90C69 /* DataExtension.swift in Sources */,
+				16F15F6F22D68CC600E90C69 /* FetchUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PersonProject/PersonProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43BBC72U4R;
 				INFOPLIST_FILE = "$(SRCROOT)/PersonProject/Resources/Info.plist";
@@ -376,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PersonProject/PersonProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 43BBC72U4R;
 				INFOPLIST_FILE = "$(SRCROOT)/PersonProject/Resources/Info.plist";
