@@ -12,8 +12,12 @@ import MapKit
 
 class EventsListViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: CustomSearchBar!
     @IBOutlet weak var eventsTableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signupButton: UIButton!
     
     
     
@@ -32,8 +36,41 @@ class EventsListViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 1 everything starts out hidden
+        eventsTableView.isHidden = true
+        searchBar.isHidden = true
+        navigationController?.setToolbarHidden(true, animated: false)
+        userNameTextField.isHidden = true
+        passwordTextField.isHidden = true
+        signupButton.isHidden = true
+        // hide the tab bar also
+        
+        // 2 fetch the user if there is one
+        UserController.shared.fetchCurrentUser { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.eventsTableView.isHidden = false
+                    self.searchBar.isHidden = false
+                    self.userNameTextField.isHidden = true
+                    self.passwordTextField.isHidden = true
+                    self.signupButton.isHidden = true
+                }
+            }else{
+                DispatchQueue.main.async {
+                    self.eventsTableView.isHidden = true
+                    self.searchBar.isHidden = true
+                    self.userNameTextField.isHidden = false
+                    self.passwordTextField.isHidden = false
+                    self.signupButton.isHidden = false
+                }
+            }
+        }
         self.searchByLocation = false
         EventsController.shared.fetchEvents(searchTerm: "postalCode") { (locations) in
             EventsController.shared.events = locations ?? []
@@ -52,13 +89,16 @@ class EventsListViewController: UIViewController {
             print("No permissions here😳😳😳😳")
         }else{
             print("we got them permissions🤗🤗🤗🤗")
-//            mapView.showsUserLocation = true
+            //            mapView.showsUserLocation = true
             if locationManager?.location == nil{
                 locationManager?.startUpdatingLocation()
             }
             self.location = EventsController.shared.events
         }
     }
+    
+    // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "eventsToDetailVC" {
             if let index = eventsTableView.indexPathForSelectedRow?.row {
@@ -66,6 +106,28 @@ class EventsListViewController: UIViewController {
                 
                 let locations = location[index]
                 destinationVC?.location = locations
+            }
+        }
+    }
+    @IBAction func signupButtonTapped(_ sender: Any) {
+        
+        guard let username = userNameTextField.text,
+            !username.isEmpty,
+            let password = passwordTextField.text,
+            !password.isEmpty
+            else {return}
+        
+        UserController.shared.createNewUser(username: username, password: password) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.eventsTableView.isHidden = false
+                    self.searchBar.isHidden = false
+                    self.userNameTextField.isHidden = true
+                    self.passwordTextField.isHidden = true
+                    self.signupButton.isHidden = true
+                    
+                    return
+                }
             }
         }
     }
@@ -100,5 +162,5 @@ extension EventsListViewController: UISearchBarDelegate {
 }
 
 
-    
+
 
